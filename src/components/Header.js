@@ -16,7 +16,7 @@ const Header = () => {
 
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const user = useSelector((store) => store.user);
-  console.log("from header" + JSON.stringify(user));
+  //console.log("from header" + JSON.stringify(user));
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
