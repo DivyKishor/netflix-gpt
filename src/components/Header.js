@@ -44,25 +44,33 @@ const Header = () => {
   };
   return (
     <>
-      <div className="absolute z-10 w-full px-8 py-2 bg-gradient-to-b from-black flex justify-between">
-        <img className="w-52" alt="logo" src={LOGO} />
+      <div className="absolute z-10 w-full px-8 py-2 bg-gradient-to-b from-black flex justify-between flex-col md:flex-row">
+        <img className="w-52 mx-auto md:mx-0" alt="logo" src={LOGO} />
+        <div className="flex sm:flex-col">
+          {user && (
+            <div className="py-8">
+              <button
+                className=" flex rounded justify-center text-white p-2 m-2 bg-blue-700 w-28 h-10 "
+                onClick={() => {
+                  dispatch(setShowGptSearch(true));
+                }}
+              >
+                {showGptSearch ? "Browse" : "GPT Search"}
+              </button>
+            </div>
+          )}
 
-        {user && (
-          <button
-            className=" flex rounded text-white p-2 m-2"
-            onClick={() => {
-              dispatch(setShowGptSearch(true));
-            }}
-          >
-            {showGptSearch ? 'Browse' : 'GPT Search' }
-          </button>
-        )}
-
-        {user && (
-          <div className="py-8">
-            <button onClick={handleSignOut}>Sign Out</button>
-          </div>
-        )}
+          {user && (
+            <div className="py-8">
+              <button
+                className=" flex rounded justify-center text-white p-2 m-2 bg-red-700 w-28 h-10 "
+                onClick={handleSignOut}
+              >
+                Sign Out
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
