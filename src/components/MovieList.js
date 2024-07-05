@@ -5,12 +5,15 @@ const MovieList = ({ title, movies , wrap}) => {
     //console.log(movies);
   return ( movies &&
   <div className="px-6">
-    <div className="font-bold py-4 text-white">
+    <div className=" text-lg md:font-bold py-4 text-white">
         <h1>{title}</h1>
     </div>
-    <div className="flex overflow-x-scroll ">
+    <div className="flex md:overflow-x-scroll flex-col">
       
-      <div className={wrap ? "flex flex-wrap justify-center" : "flex"}>
+      <div 
+      className={wrap ? "flex flex-wrap justify-center" : "flex"}
+      // className="flex"
+      >
         {movies?.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}

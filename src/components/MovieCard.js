@@ -33,8 +33,8 @@ const MovieCard = (movie) => {
   const { original_title, overview, poster_path } = movie.movie;
   if(!poster_path) return null;
   return (
-    <div className="w-40 pr-4 py-2 text-white" onClick={handleCardClick}>
-      <img alt={original_title} src={IMG_CDN_URL + poster_path} />
+    <div className="pr-4 py-2 text-white" onClick={handleCardClick}>
+      <img className="md:w-56 w-36" alt={original_title} src={IMG_CDN_URL + poster_path} />
     </div>
   );
 };

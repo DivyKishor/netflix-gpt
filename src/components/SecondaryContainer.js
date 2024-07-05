@@ -14,7 +14,7 @@ const SecondaryContainer = () => {
         . 
             Movie Cards      
         */}
-        <div className='-mt-48 relative z-20 px-12'>
+        <div className='md:-mt-48 relative z-20 px-12'>
             {movies.nowPlayingMovies &&<MovieList title="Now Playing" movies={movies.nowPlayingMovies} />}
             {/* {movies.popularMovies &&<MovieList title="Popular" movies={movies.popularMovies} />} */}
             {movies.topRatedMovies &&<MovieList title="Top Rated" movies={movies.topRatedMovies} />}

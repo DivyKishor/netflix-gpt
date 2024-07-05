@@ -44,11 +44,11 @@ const Header = () => {
   };
   return (
     <>
-      <div className="absolute z-10 w-full px-8 py-2 bg-gradient-to-b from-black flex justify-between flex-col md:flex-row">
-        <img className="w-52 mx-auto md:mx-0" alt="logo" src={LOGO} />
-        <div className="flex sm:flex-col">
-          {user && (
-            <div className="py-8">
+      <div className="absolute z-10 w-full px-8 py-2 bg-gradient-to-b from-black flex justify-between item-center flex-col md:flex-row">
+        <img className="w-52 h-20 mx-auto md:mx-0" alt="logo" src={LOGO} />
+        <div className="flex sm:flex-row justify-center" >
+          {user.user && (
+            <div className="py-4">
               <button
                 className=" flex rounded justify-center text-white p-2 m-2 bg-blue-700 w-28 h-10 "
                 onClick={() => {
@@ -60,8 +60,8 @@ const Header = () => {
             </div>
           )}
 
-          {user && (
-            <div className="py-8">
+          {user.user && (
+            <div className="py-4">
               <button
                 className=" flex rounded justify-center text-white p-2 m-2 bg-red-700 w-28 h-10 "
                 onClick={handleSignOut}

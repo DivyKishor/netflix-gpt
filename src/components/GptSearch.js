@@ -11,7 +11,7 @@ const GptSearch = () => {
   return (
     <div>
       <div className='fixed -z-10'>
-          <img class="h-screen " alt="background" src={BG_URL} />
+          <img className="h-screen object-cover" alt="background" src={BG_URL} />
           {/* <div className='absolute w-full h-full bg-black'></div> */}
       </div>
       <GptSearchBar onSearch={(data)=>onSearch(data)}/>
